@@ -1,0 +1,27 @@
+hf_token: hf_abc123
+
+server:
+  host: 0.0.0.0
+  port: 8000
+  log_level: info
+  max_file_size: 25MB
+  workers: 1
+
+device: auto
+
+models:
+  whisper-1:
+    repo: openai/whisper-large-v3
+    device: auto
+    compute_type: float16
+
+  tts-1:
+    repo: hexgrad/Kokoro-82M
+    device: auto
+
+model_cache_dir: /models
+model_ttl: 0
+
+voice_store_dir: /models/voices
+
+key_store_dir: /models/keys
